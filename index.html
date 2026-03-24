@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رحلة الأسماء الموصولة</title>
+    <!-- استخدام Tailwind CSS للتصميم -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- استدعاء خط عربي جميل ومقروء للأطفال -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f0f9ff;
+            background-image: radial-gradient(#bae6fd 2px, transparent 2px);
+            background-size: 30px 30px;
+        }
+
+        /* حركات (Animations) بسيطة لجذب انتباه الأطفال */
+        .bounce-hover:hover {
+            transform: translateY(-10px);
+            transition: transform 0.3s ease;
+        }
+
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* تنسيقات خاصة باللعبة */
+        .quiz-option {
+            transition: all 0.2s;
+        }
+        .quiz-option:hover {
+            transform: scale(1.05);
+        }
+        .correct-answer {
+            background-color: #4ade80 !important; /* أخضر */
+            color: white !important;
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(74, 222, 128, 0.6);
+        }
+        .wrong-answer {
+            background-color: #f87171 !important; /* أحمر */
+            color: white !important;
+            animation: shake 0.5s;
+        }
+
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+        }
+        
+        /* تزيين العنوان */
+        .title-gradient {
+            background: linear-gradient(to right, #2563eb, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- الرأس (Header) -->
+    <header class="bg-white shadow-md py-6 rounded-b-3xl mx-4 lg:mx-20 mb-10 border-b-4 border-blue-400">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold title-gradient mb-3">🌟 رحلة الأسماء الموصولة 🌟</h1>
+            <p class="text-xl md:text-2xl text-gray-600 font-medium">أهلاً بك يا بطل! لنتعلم معاً كيف نربط الجمل باستخدام الأسماء الموصولة.</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 pb-20">
+        
+        <!-- قسم الشرح -->
+        <section class="mb-16">
+            <div class="bg-yellow-100 border-l-4 border-r-4 border-yellow-400 p-6 rounded-2xl mb-10 max-w-4xl mx-auto shadow-sm">
+                <h2 class="text-3xl font-bold text-yellow-800 mb-2">🤔 ما هي الأسماء الموصولة؟</h2>
+                <p class="text-xl text-yellow-900 leading-relaxed">
+                    هي كلمات نستخدمها للربط بين جملتين لتصبحا جملة واحدة مفيدة، ولا يكتمل معناها إلا بالجملة التي تأتي بعدها وتسمى (صلة الموصول).
+                </p>
+            </div>
+
+            <!-- بطاقات الأسماء الموصولة -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- الذي -->
+                <div class="bg-white rounded-3xl p-6 border-4 border-blue-200 card-shadow bounce-hover relative overflow-hidden group">
+                    <div class="absolute -right-6 -top-6 w-24 h-24 bg-blue-100 rounded-full z-0 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10 text-center">
+                        <div class="text-6xl mb-4">👦🏻</div>
+                        <h3 class="text-4xl font-extrabold text-blue-600 mb-2">الَّذِي</h3>
+                        <p class="text-lg text-gray-600 font-bold mb-4 bg-blue-50 py-1 rounded-full">للمفرد المذكر (ولد واحد)</p>
+                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                            <p class="text-lg">مثال: جاء الطالبُ <span class="text-blue-600 font-bold text-xl">الذي</span> نجح.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- التي -->
+                <div class="bg-white rounded-3xl p-6 border-4 border-pink-200 card-shadow bounce-hover relative overflow-hidden group">
+                    <div class="absolute -right-6 -top-6 w-24 h-24 bg-pink-100 rounded-full z-0 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10 text-center">
+                        <div class="text-6xl mb-4">👧🏻</div>
+                        <h3 class="text-4xl font-extrabold text-pink-600 mb-2">الَّتِي</h3>
+                        <p class="text-lg text-gray-600 font-bold mb-2 bg-pink-50 py-1 rounded-full">للمفرد المؤنث (بنت واحدة)</p>
+                        <p class="text-sm text-gray-500 font-bold mb-4">(وجمع غير العاقل)</p>
+                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                            <p class="text-lg">مثال: رأيتُ البنتَ <span class="text-pink-600 font-bold text-xl">التي</span> فازت.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- اللذان -->
+                <div class="bg-white rounded-3xl p-6 border-4 border-green-200 card-shadow bounce-hover relative overflow-hidden group">
+                    <div class="absolute -right-6 -top-6 w-24 h-24 bg-green-100 rounded-full z-0 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10 text-center">
+                        <div class="text-6xl mb-4">👦🏻👦🏻</div>
+                        <h3 class="text-4xl font-extrabold text-green-600 mb-2">اللَّذَانِ</h3>
+                        <p class="text-lg text-gray-600 font-bold mb-4 bg-green-50 py-1 rounded-full">للمثنى المذكر (ولدان اثنان)</p>
+                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                            <p class="text-lg">مثال: عاد البطلان <span class="text-green-600 font-bold text-xl">اللذان</span> شاركا في السباق.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- اللتان -->
+                <div class="bg-white rounded-3xl p-6 border-4 border-purple-200 card-shadow bounce-hover relative overflow-hidden group">
+                    <div class="absolute -right-6 -top-6 w-24 h-24 bg-purple-100 rounded-full z-0 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10 text-center">
+                        <div class="text-6xl mb-4">👧🏻👧🏻</div>
+                        <h3 class="text-4xl font-extrabold text-purple-600 mb-2">اللَّتَانِ</h3>
+                        <p class="text-lg text-gray-600 font-bold mb-4 bg-purple-50 py-1 rounded-full">للمثنى المؤنث (بنتان اثنتان)</p>
+                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                            <p class="text-lg">مثال: نجحت الطالبتان <span class="text-purple-600 font-bold text-xl">اللتان</span> اجتهدتا.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الذين -->
+                <div class="bg-white rounded-3xl p-6 border-4 border-orange-200 card-shadow bounce-hover relative overflow-hidden group">
+                    <div class="absolute -right-6 -top-6 w-24 h-24 bg-orange-100 rounded-full z-0 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10 text-center">
+                        <div class="text-6xl mb-4">👨🏽‍🤝‍👨🏼👨🏻‍🦱</div>
+                        <h3 class="text-4xl font-extrabold text-orange-500 mb-2">الَّذِينَ</h3>
+                        <p class="text-lg text-gray-600 font-bold mb-4 bg-orange-50 py-1 rounded-full">لجمع المذكر العاقل (أولاد كثيرون)</p>
+                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                            <p class="text-lg">مثال: أُحبُّ المعلمين <span class="text-orange-500 font-bold text-xl">الذين</span> يخلصون.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- اللواتي -->
+                <div class="bg-white rounded-3xl p-6 border-4 border-teal-200 card-shadow bounce-hover relative overflow-hidden group">
+                    <div class="absolute -right-6 -top-6 w-24 h-24 bg-teal-100 rounded-full z-0 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10 text-center">
+                        <div class="text-6xl mb-4">👩🏻‍🤝‍👩🏼👩🏽</div>
+                        <h3 class="text-4xl font-extrabold text-teal-600 mb-2">اللَّوَاتِي</h3>
+                        <p class="text-lg text-gray-600 font-bold mb-4 bg-teal-50 py-1 rounded-full">لجمع المؤنث العاقل (بنات كثيرات)</p>
+                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                            <p class="text-lg">مثال: شكرتُ الطبيبات <span class="text-teal-600 font-bold text-xl">اللواتي</span> عالجن المرضى.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- قسم اللعبة التفاعلية -->
+        <section id="quiz-section" class="max-w-3xl mx-auto mt-20">
+            <div class="bg-white p-8 rounded-3xl card-shadow border-4 border-indigo-400 relative">
+                <div class="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-indigo-500 text-white py-2 px-8 rounded-full text-2xl font-bold shadow-lg">
+                    🎮 وقت اللعب والاختبار! 🎮
+                </div>
+                
+                <!-- واجهة اللعبة -->
+                <div id="quiz-container" class="mt-8 text-center">
+                    <div class="flex justify-between items-center mb-6 text-indigo-800 font-bold text-lg bg-indigo-50 p-3 rounded-xl">
+                        <span>السؤال: <span id="question-number" class="text-indigo-600 text-2xl">1</span> / 5</span>
+                        <span>النقاط: <span id="score" class="text-green-600 text-2xl">0</span> ⭐️</span>
+                    </div>
+
+                    <h3 id="question-text" class="text-3xl font-bold text-gray-800 mb-8 leading-relaxed">
+                        هذا هو الولد _____ فاز بالجائزة.
+                    </h3>
+
+                    <div id="options-container" class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <!-- الخيارات ستظهر هنا عن طريق جافاسكربت -->
+                    </div>
+
+                    <!-- رسالة النتيجة للسؤال الواحد -->
+                    <div id="feedback" class="mt-6 text-2xl font-bold h-10 transition-opacity opacity-0">
+                        <!-- رسالة صح أو خطأ -->
+                    </div>
+
+                    <button id="next-btn" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-10 rounded-full text-xl hidden transition-colors shadow-md mx-auto block">
+                        السؤال التالي ➡️
+                    </button>
+                </div>
+
+                <!-- شاشة النهاية -->
+                <div id="result-container" class="mt-8 text-center hidden">
+                    <h2 class="text-5xl mb-4">🎉</h2>
+                    <h3 class="text-4xl font-bold text-indigo-700 mb-4">انتهت اللعبة!</h3>
+                    <p class="text-2xl text-gray-700 mb-6">لقد حصلت على <span id="final-score" class="text-green-600 font-extrabold text-4xl">0</span> من 5 نقاط.</p>
+                    <p id="result-message" class="text-2xl font-bold text-orange-500 mb-8"></p>
+                    <button onclick="restartQuiz()" class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-12 rounded-full text-2xl transition-colors shadow-lg">
+                        🔄 العب مرة أخرى
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white py-6 text-center text-gray-500 mt-10 border-t-2 border-gray-200">
+        <p class="text-lg font-bold">مصمم بكل حب لطلاب الصف الرابع ❤️</p>
+    </footer>
+
+    <!-- جافاسكربت لبرمجة اللعبة -->
+    <script>
+        // بيانات الأسئلة
+        const quizData = [
+            {
+                question: "هذا هو الولد _____ فاز بالمركز الأول.",
+                options: ["التي", "الذي", "الذين"],
+                correct: "الذي"
+            },
+            {
+                question: "شاهدتُ العصفورة _____ تقف على الغصن.",
+                options: ["التي", "اللواتي", "اللذان"],
+                correct: "التي"
+            },
+            {
+                question: "عاد الجنود _____ دافعوا عن الوطن.",
+                options: ["الذين", "الذي", "اللذان"],
+                correct: "الذين"
+            },
+            {
+                question: "الطالبان _____ يدرسان بجد ينجحان.",
+                options: ["الذي", "اللتان", "اللذان"],
+                correct: "اللذان"
+            },
+            {
+                question: "الممرضات _____ يعتنين بالمرضى رحيمات.",
+                options: ["اللواتي", "الذين", "التي"],
+                correct: "اللواتي"
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let canClick = true; // لمنع النقر المتعدد
+
+        // عناصر DOM
+        const questionText = document.getElementById('question-text');
+        const optionsContainer = document.getElementById('options-container');
+        const questionNumber = document.getElementById('question-number');
+        const scoreDisplay = document.getElementById('score');
+        const feedback = document.getElementById('feedback');
+        const nextBtn = document.getElementById('next-btn');
+        const quizContainer = document.getElementById('quiz-container');
+        const resultContainer = document.getElementById('result-container');
+        const finalScore = document.getElementById('final-score');
+        const resultMessage = document.getElementById('result-message');
+
+        // تحميل السؤال
+        function loadQuestion() {
+            canClick = true;
+            feedback.style.opacity = '0';
+            nextBtn.style.display = 'none';
+            
+            const currentQ = quizData[currentQuestion];
+            questionText.innerHTML = currentQ.question.replace('_____', '<span class="text-indigo-500 inline-block w-20 border-b-4 border-indigo-500 border-dashed mx-2 text-center">_____</span>');
+            questionNumber.textContent = currentQuestion + 1;
+            
+            optionsContainer.innerHTML = '';
+            
+            currentQ.options.forEach(option => {
+                const button = document.createElement('button');
+                button.textContent = option;
+                button.className = 'quiz-option bg-gray-100 hover:bg-indigo-100 text-indigo-900 font-bold py-4 px-6 rounded-2xl border-2 border-indigo-200 text-2xl shadow-sm';
+                button.onclick = () => checkAnswer(button, option, currentQ.correct);
+                optionsContainer.appendChild(button);
+            });
+        }
+
+        // التحقق من الإجابة
+        function checkAnswer(btnElement, selectedOption, correctOption) {
+            if (!canClick) return;
+            canClick = false;
+
+            const buttons = optionsContainer.querySelectorAll('button');
+            
+            if (selectedOption === correctOption) {
+                // إجابة صحيحة
+                btnElement.classList.add('correct-answer');
+                score++;
+                scoreDisplay.textContent = score;
+                feedback.textContent = 'أحسنت! إجابة رائعة 🌟';
+                feedback.className = 'mt-6 text-2xl font-bold h-10 transition-opacity opacity-100 text-green-600';
+                
+                // تحديث شكل الفراغ
+                questionText.innerHTML = quizData[currentQuestion].question.replace('_____', `<span class="text-green-500 bg-green-100 px-4 rounded-lg">${correctOption}</span>`);
+            } else {
+                // إجابة خاطئة
+                btnElement.classList.add('wrong-answer');
+                feedback.textContent = 'حاول مرة أخرى! الإجابة الصحيحة هي: ' + correctOption + ' ❌';
+                feedback.className = 'mt-6 text-2xl font-bold h-10 transition-opacity opacity-100 text-red-500';
+                
+                // إظهار الإجابة الصحيحة للأطفال ليتعلموا
+                buttons.forEach(b => {
+                    if (b.textContent === correctOption) {
+                        b.classList.remove('bg-gray-100', 'hover:bg-indigo-100');
+                        b.classList.add('bg-green-200', 'border-green-400', 'text-green-800');
+                    }
+                });
+            }
+
+            // تعطيل باقي الأزرار
+            buttons.forEach(b => {
+                b.style.cursor = 'not-allowed';
+            });
+
+            // إظهار زر التالي
+            nextBtn.style.display = 'block';
+        }
+
+        // الانتقال للسؤال التالي
+        nextBtn.addEventListener('click', () => {
+            currentQuestion++;
+            if (currentQuestion < quizData.length) {
+                loadQuestion();
+            } else {
+                showResults();
+            }
+        });
+
+        // إظهار النتيجة النهائية
+        function showResults() {
+            quizContainer.style.display = 'none';
+            resultContainer.style.display = 'block';
+            finalScore.textContent = score;
+
+            if (score === 5) {
+                resultMessage.textContent = "أنت بطل خارق في اللغة العربية! 🏆";
+                resultMessage.className = "text-2xl font-bold text-green-600 mb-8";
+            } else if (score >= 3) {
+                resultMessage.textContent = "نتيجة جيدة جداً، استمر في التعلم! 👍";
+                resultMessage.className = "text-2xl font-bold text-blue-600 mb-8";
+            } else {
+                resultMessage.textContent = "لا بأس! راجع القاعدة في الأعلى وحاول مرة أخرى 💪";
+                resultMessage.className = "text-2xl font-bold text-orange-500 mb-8";
+            }
+        }
+
+        // إعادة تشغيل اللعبة
+        function restartQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            scoreDisplay.textContent = score;
+            resultContainer.style.display = 'none';
+            quizContainer.style.display = 'block';
+            loadQuestion();
+        }
+
+        // بدء اللعبة لأول مرة
+        loadQuestion();
+    </script>
+</body>
+</html>
+
